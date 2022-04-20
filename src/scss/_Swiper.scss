@@ -1,0 +1,18 @@
+.swiper {
+  display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: space-around;
+    opacity: 10;
+    background-color:  opacify($color: #fbf7c2, $amount: .01);
+    border-style: solid;
+    border-color: #03989e;
+    border-width: 4px;
+    height: 30em;
+    width: 100vw;
+        h1 {
+          margin: 6em;
+        }
+}
