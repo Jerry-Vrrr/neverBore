@@ -1,6 +1,9 @@
 import './App.css';
 import { rawData } from '../apiCals';
 import React, {Component} from 'react';
+import Header from './Header';
+import Footer from './Footer';
+import Swiper from './Swiper';
 
 class App extends Component {
   constructor () {
@@ -23,9 +26,9 @@ componentDidMount() {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <p>{this.state.info.activity}</p>
-        </header>
+        <Header />
+        <Swiper activity={this.state.info.activity}/>
+        <Footer />
       </div>
     );
   }
