@@ -1,0 +1,18 @@
+.like-bar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100vw;
+    background-color: #fcc70b;
+    border-style: solid;
+    border-color: #03989e;
+    border-width: 4px;
+    height: 2.25em;
+        button {
+            color: #fbf7c2;
+            font-weight: 600;
+            background-color: #03989e;
+            height: 2em;
+        }
+}
