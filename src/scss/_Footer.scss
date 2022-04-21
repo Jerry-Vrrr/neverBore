@@ -1,12 +1,20 @@
 .footer {
     display: flex;
     flex-direction: row;
-    background-color: #ff5757;
+    justify-content: space-around;
+    align-items: center;
+    background-color: $header-color;
     border-style: solid;
-    border-color: #03989e;
-    border-width: 4px;
-    Height: 4em;
+    border-color: $border-color;
+    border-width: 6px;
+    Height: 4vh;
     width: 100vw;
+        a {
+            color: $font;
+            font-weight: 500;
+            font-size: large;
+            text-decoration: underline;
+        }
         .logo {
             height: 3em
         }

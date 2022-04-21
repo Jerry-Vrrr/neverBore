@@ -5,14 +5,85 @@
 	justify-content: center;
 	align-items: center;
 	align-content: space-around;
-    opacity: 10;
-    background-color:  opacify($color: #fbf7c2, $amount: .01);
-    border-style: solid;
-    border-color: #03989e;
-    border-width: 4px;
-    height: 30em;
+  background-image: url(https://images.fineartamerica.com/images-medium-large-5/seamless-wave-pattern-in-blue-and-white-incomible.jpg);
+  background-repeat: no-repeat;
+  background-size: 1800px 1500px;
+  object-fit: cover;
+  border-style: solid;
+    border-color: $border-color;
+    border-width: 2px;
+    height: 60vh;
     width: 100vw;
+    h2{
+      font-size: x-large;
+      padding: .5em;
+      padding-right: 1em;
+      border-style: solid;
+      text-decoration: underline;
+      border-color: $border-color;
+      border-width: 3px;
+      border-radius: 5px;
+      align-self: center;
+      max-width: 4.5em;
+      background-color: $primary-color;
+      margin: 2em;
+
+    }
+    
         h1 {
-          margin: 6em;
+          display: flex;
+          flex-wrap: wrap;
+          min-width: 10em;
+          margin: 2em 6em 6em 6em;
+          padding: 1.25em;
+          border-style: solid;
+          border-color: $border-color;
+          border-width: 3px;
+          border-radius: 5px;
+          background-color: $primary-color;
+          .raven {
+            height: 4em;
+          }
         }
+}
+
+h1 {
+  margin: 1%;
+  width: 80%;
+  
+    @include breakpoint(mobile) {
+      width: 13em;
+      font-size: 18px;
+
+    }
+    @include breakpoint(narrow) {
+      width: 14em;
+      font-size: 22px;
+
+    }
+    @include breakpoint(small) {
+      width: 15em;
+      font-size: 25px;
+    }
+  @include breakpoint(tablet) {
+    width: 17em;
+      font-size: 29px;
+  }
+  @include breakpoint(medium) {
+      width: 19em;
+      font-size: 31px;
+  }
+  @include breakpoint(large) {
+      width: 24em;
+      font-size: 33px;
+  }
+  @include breakpoint(wide) {
+      width: 26em;
+      font-size: 34px;
+  }
+  @include breakpoint(wider) {
+      width: 28em;
+      font-size: 35px;
+      
+  }
 }

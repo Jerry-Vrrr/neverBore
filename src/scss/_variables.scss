@@ -1,1 +1,16 @@
-// $primary-color: #fbf7c2;
+$primary-color: #e6e6db;
+$border-color: #03989e;
+$header-color: #ff5757;
+$accent-color: #fcc70b;
+$font: black;
+
+$breakpoints: (
+  mobile: 420px,
+  narrow: 530px,
+  small: 600px,
+  tablet: 720px,
+  medium: 850px,
+  large: 1140px,
+  wide: 1300px,
+  wider: 1500px
+);

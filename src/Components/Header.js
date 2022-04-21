@@ -1,7 +1,6 @@
 import { useContext } from "react";
 // import { Link, useLocation } from "react-router-dom";
 import neverBore from "../neverBore.png";
-import '../scss/_Header.scss'
 
 
 const Header = () => {
