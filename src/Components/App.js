@@ -1,12 +1,13 @@
 import '../css/style.css'
 import { educational, chores, charity, relaxation } from '../apiCals';
-import React, {Component, useState} from 'react';
+import React, {Component} from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Swiper from './Swiper';
 import LikeBar from './LikeBar';
 import Filter from './Filter';
 import Modal from './Modal';
+import NotePad from './NotePad';
 
 class App extends Component {
   constructor () {
@@ -17,6 +18,7 @@ class App extends Component {
       relaxation: '',
       charity: '',
       isOpen: false,
+      noteOpen: false,
 
     }
   }
@@ -44,10 +46,16 @@ componentDidMount() {
         <Modal open={this.state.isOpen} 
                onClose={() => this.setState({isOpen: false})} 
                props={this.state} 
-               />
-          
-        {/* </Modal> */}
-        <LikeBar />
+        />
+        <NotePad 
+          open={this.state.noteOpen} 
+          onClose={() => this.setState({noteOpen: false})} 
+          props={this.state} 
+        /> 
+        <LikeBar  
+          props={this.state} 
+          openNotes={() => this.setState({noteOpen: true})}
+        />
         <Filter />
         <Footer />
       </div>

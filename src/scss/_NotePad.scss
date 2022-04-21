@@ -1,4 +1,4 @@
-.modal {
+.notepad {
     height: 60vh;
     width: 60vw;
     position: fixed;
@@ -17,7 +17,7 @@
     border-color: $border-color;
     padding: 1em;
     z-index: 1000;
-        .modal-head {
+        .note-head {
             margin-bottom: 2em;
             img {
                 height: 5em;
@@ -47,7 +47,7 @@
             font-weight: 600;
             color: $font;
         }
-    .modal-foot {
+    .note-foot {
         display: flex;
         justify-content: space-around;
             button {
@@ -67,7 +67,9 @@
         }
             
     }
-    }     
+}   
+    
+    
 .overlay {
     position: fixed;
     top: 0%;
