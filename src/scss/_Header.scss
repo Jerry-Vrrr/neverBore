@@ -1,8 +1,10 @@
 .header {
     display: flex;
     flex-direction: row;
-    background-color: #ff5757;
-    Height: 9em;
+    background-color: $header-color;
+    border-style: solid;
+    border-color: $border-color;
+    Height: 15vh;
     width: 100vw;
         .logo {
             height: 9em

@@ -1,8 +1,7 @@
 import { useContext } from "react";
 // import { Link, useLocation } from "react-router-dom";
-import "./_Header.scss";
 import neverBore from "../neverBore.png";
-import Swiper from "swiper";
+
 
 const Header = () => {
   
