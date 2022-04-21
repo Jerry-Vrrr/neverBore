@@ -1,11 +1,12 @@
 import '../css/style.css'
 import { educational, chores, charity, relaxation } from '../apiCals';
-import React, {Component} from 'react';
+import React, {Component, useState} from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import Swiper from './Swiper';
 import LikeBar from './LikeBar';
 import Filter from './Filter';
+import Modal from './Modal';
 
 class App extends Component {
   constructor () {
@@ -14,7 +15,8 @@ class App extends Component {
       education: '',
       busywork: '',
       relaxation: '',
-      charity: ''
+      charity: '',
+      isOpen: false,
 
     }
   }
@@ -37,6 +39,9 @@ componentDidMount() {
       <div className="App">
         <Header />
         <Swiper props={this.state}/>
+        <Modal open={this.state.isOpen} onClose={() => this.setState({isOpen: false})} props={this.state}>
+          Modal
+        </Modal>
         <LikeBar />
         <Filter />
         <Footer />

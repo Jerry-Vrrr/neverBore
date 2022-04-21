@@ -1,0 +1,28 @@
+.modal {
+    height: 60vh;
+    width: 60vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    right: 50%;
+    bottom: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url(https://images.fineartamerica.com/images-medium-large-5/seamless-wave-pattern-in-blue-and-white-incomible.jpg);
+    border-style: solid;
+    border-radius: .5em;
+    border-color: $border-color;
+    padding: 3em;
+    z-index: 1000;
+        img {
+            height: 5em;
+        }
+}
+.overlay {
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    background-color: rgba($color: #000000, $alpha: 0.75);
+    z-index: 1000;
+}
