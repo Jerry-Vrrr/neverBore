@@ -38,10 +38,15 @@ componentDidMount() {
     return (
       <div className="App">
         <Header />
-        <Swiper props={this.state}/>
-        <Modal open={this.state.isOpen} onClose={() => this.setState({isOpen: false})} props={this.state}>
-          Modal
-        </Modal>
+        <Swiper props={this.state}
+                openModal={() => this.setState({isOpen: true})}
+        />
+        <Modal open={this.state.isOpen} 
+               onClose={() => this.setState({isOpen: false})} 
+               props={this.state} 
+               />
+          
+        {/* </Modal> */}
         <LikeBar />
         <Filter />
         <Footer />
