@@ -2,6 +2,10 @@
     height: 60vh;
     width: 60vw;
     position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+    flex-wrap: wrap;
     top: 50%;
     left: 50%;
     right: 50%;
@@ -11,12 +15,59 @@
     border-style: solid;
     border-radius: .5em;
     border-color: $border-color;
-    padding: 3em;
+    padding: 1em;
     z-index: 1000;
-        img {
-            height: 5em;
+        .modal-head {
+            margin-bottom: 2em;
+            img {
+                height: 5em;
+                margin: 1em;
+                border-style: solid;
+                border-radius: .5em;
+                border-color: $border-color;
+            }
+            button {
+                float: right;
+                border-style: solid;
+                margin-top: 1em;
+                border-radius: .5em;
+                border-color: $border-color;
+                border-width: 1.5px;
+            }    
         }
-}
+        h1 {
+            align-self: center;
+            font-size: 40px;
+            max-width: 50vw;
+            margin-bottom: 5em;
+            
+        }
+        a {
+            float: bottom;
+            font-weight: 600;
+            color: $font;
+        }
+    .modal-foot {
+        display: flex;
+        justify-content: space-around;
+            button {
+            border-radius: 3px;
+            font-family: Arial;
+            font-size: 12px;
+            font-weight: 600;
+            background: $accent-color;
+            border-style: dashed;
+            border-color: rgba(255, 255, 0);
+            padding: 6px 20px 6px 20px;
+            text-decoration: none;
+        }
+        button:hover {
+            background: rgba(244, 244, 93,);
+            text-decoration: none;
+        }
+            
+    }
+    }     
 .overlay {
     position: fixed;
     top: 0%;
@@ -25,4 +76,4 @@
     bottom: 0%;
     background-color: rgba($color: #000000, $alpha: 0.75);
     z-index: 1000;
-}
+    }
