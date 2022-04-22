@@ -7,7 +7,6 @@ import "swiper/css/scrollbar";
 import raven from "../raven.png";
 
 export default ({ props, openModal }) => {
-  console.log(props);
   return (
     <Swiper
       // install Swiper modules
@@ -18,8 +17,6 @@ export default ({ props, openModal }) => {
       navigation
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log("slide change")}
     >
       <SwiperSlide>
         <h2>Educational</h2>
@@ -28,7 +25,7 @@ export default ({ props, openModal }) => {
             <img className="raven" src={raven} />
             <br></br>
             {props.education}
-            <button onClick={openModal}>expand</button>
+            <button id='education' onClick={openModal}>expand</button>
           </h1>
         </div>
       </SwiperSlide>
@@ -38,6 +35,7 @@ export default ({ props, openModal }) => {
           <img className="raven" src={raven} />
           <br></br>
           {props.charity}
+          <button id='charity' onClick={openModal}>expand</button>
         </h1>
       </SwiperSlide>
       <SwiperSlide>
@@ -46,6 +44,7 @@ export default ({ props, openModal }) => {
           <img className="raven" src={raven} />
           <br></br>
           {props.relaxation}
+          <button id='relaxation' onClick={openModal}>expand</button>
         </h1>
       </SwiperSlide>
       <SwiperSlide>
@@ -54,6 +53,7 @@ export default ({ props, openModal }) => {
           <img className="raven" src={raven} />
           <br></br>
           {props.busywork}
+          <button id='busywork' onClick={openModal}>expand</button>
         </h1>
       </SwiperSlide>
       ...

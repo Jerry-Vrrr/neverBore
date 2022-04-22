@@ -367,7 +367,7 @@ h1 {
   position: fixed;
   display: flex;
   flex-direction: column;
-  align-content: space-around;
+  align-content: space-between;
   flex-wrap: wrap;
   top: 50%;
   left: 50%;
@@ -394,7 +394,7 @@ h1 {
 .notepad .note-head button {
   float: right;
   border-style: solid;
-  margin-top: 1em;
+  margin-top: 1.5em;
   border-radius: 0.5em;
   border-color: #03989e;
   border-width: 1.5px;
@@ -428,6 +428,13 @@ h1 {
 .notepad .note-foot button:hover {
   background: rgb(244, 244, 93);
   text-decoration: none;
+}
+.notepad ul {
+  font-size: x-large;
+  font-weight: 600;
+  text-decoration: underline;
+  list-style: circle;
+  line-height: 2;
 }
 
 .overlay {

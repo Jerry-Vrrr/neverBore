@@ -1,8 +1,11 @@
 import React from "react";
 import raven from "../raven.png";
 
-export default function NotePad({ open, children, onClose, props }) {
+export default function NotePad({ open, children, onClose, notes }) {
   if (!open) return null;
+  const noteDisplay = notes.map(note => {
+      return <li>{note} </li>
+  })
   return (
     <>
       <div className="overlay">
@@ -11,12 +14,10 @@ export default function NotePad({ open, children, onClose, props }) {
           <div className="note-head">
             <img src={raven}></img>
             <button onClick={onClose}>&times;</button>
-          </div>
-
-          <div className="note-foot">
-            <button>Add To List</button>
-            <button>View List</button>
-          </div>
+        </div>    
+            <ul>{noteDisplay}</ul>
+            
+          
         </div>
       </div>
     </>
