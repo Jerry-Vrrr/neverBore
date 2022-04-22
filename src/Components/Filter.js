@@ -3,10 +3,9 @@ const Filter = () => {
   
   return (
     <section className="filter">
-      <button>Educational</button>
-      <button>Volunteer</button>
+      <button>About</button>
       <button>Relaxation</button>
-      <button>Chores</button>
+      <button>Contact</button>
     </section>
   );
 };
