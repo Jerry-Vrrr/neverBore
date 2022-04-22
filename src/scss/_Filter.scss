@@ -20,7 +20,7 @@
         font-family: Arial;
         font-size: 20px;
         font-weight: 900;
-        width: 18rem;
+        width: 20rem;
         height: 5.75rem;
         background: $primary-color;
         border-color: $border-color;
@@ -38,35 +38,40 @@
  button {
     margin: 1%;
     width: 80%;
-    
+
+    @include breakpoint(micro) {
+      width: 5rem;
+      font-size: small;
+
+  }
       @include breakpoint(mobile) {
-          width: 5rem;
+          width: 7rem;
           font-size: small;
 
       }
       @include breakpoint(narrow) {
-        width: 6.5rem;
+        width: 8rem;
         font-size: small;
 
       }
       @include breakpoint(small) {
-          width: 7.5rem;
+          width: 9rem;
           font-size: medium;
       }
     @include breakpoint(tablet) {
-      width: 9rem;
+      width: 12rem;
     }
     @include breakpoint(medium) {
-        width: 11rem;
+        width: 14rem;
     }
     @include breakpoint(large) {
-        width: 13rem;
+        width: 16rem;
     }
     @include breakpoint(wide) {
-        width: 15rem;
+        width: 18rem;
     }
     @include breakpoint(wider) {
-        width: 18rem;
+        width: 22rem;
     }
   }
   

@@ -36,23 +36,27 @@
             }    
         }
         h1 {
-            align-self: center;
-            font-size: 50px;
+            // align-self: ;
+            font-size: 45px;
             max-width: 50vw;
             margin-bottom: 5em;
             
         }
         a {
-            float: bottom;
+            // float: bottom;
             font-weight: 600;
+            margin-bottom: 3em;
+            font-size: x-large;
             color: $font;
         }
     .modal-foot {
         display: flex;
+        // align-items: center;
         justify-content: space-around;
             button {
             border-radius: 3px;
             font-family: Arial;
+            // align-self: flex-start;
             font-size: 12px;
             font-weight: 600;
             background: $accent-color;

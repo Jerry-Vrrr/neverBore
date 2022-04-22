@@ -1,23 +1,37 @@
 import React from "react";
 import raven from "../raven.png";
+import Note from "./Note";
 
-export default function NotePad({ open, children, onClose, notes }) {
+export default function NotePad({
+  open,
+  onClose,
+  notes,
+  handleTask,
+  deleteTask,
+}) {
   if (!open) return null;
+  console.log(notes)
   const noteDisplay = notes.map(note => {
-      return <li>{note} </li>
-  })
+    console.log('note', note)
+    return (
+      <Note
+        {...note}
+        key={note.id}
+        handleTask={handleTask}
+        deleteTask={deleteTask}
+        note={note}
+      />
+    );
+  });
   return (
     <>
-      <div className="overlay">
+      <div className="note-overlay">
         <div className="notepad">
-          {children}
           <div className="note-head">
             <img src={raven}></img>
             <button onClick={onClose}>&times;</button>
-        </div>    
-            <ul>{noteDisplay}</ul>
-            
-          
+          </div>
+          {noteDisplay}
         </div>
       </div>
     </>

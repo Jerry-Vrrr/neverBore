@@ -11,9 +11,7 @@ export default function Modal({
 }) {
 
   if (!open) return null;
-  console.log(props.currentCategory)
-    console.log(props.education)
-    console.log(props[props.currentCategory])
+  
 
   return (
     <>
@@ -27,13 +25,14 @@ export default function Modal({
           <div>
             <h1>{props[props.currentCategory]}</h1>
           </div>
-          <div className="modal-foot">
-            <a
+          <a
               target="blank"
               href={`https://www.youtube.com/results?search_query=${props.currentCategory}`}
             >
               Check Out Some Tutorials
             </a>
+          <div className="modal-foot">
+            
             <button value={props[props.currentCategory]} onClick={addToList}>
               Add To List
             </button>

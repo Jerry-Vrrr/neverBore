@@ -48,6 +48,21 @@ class App extends Component {
     this.setState({ isOpen: true, currentCategory: event.target.id })
   }
 
+  handleNote = (id) => {
+    const updatedNotes = this.state.notes.map(note => {
+      if (note.id === id) {
+        note.checked = !note.checked
+      } return note;
+    })
+    this.setState({notes: updatedNotes})
+  }
+
+  deleteTask = (id) => {
+    const filteredNotes = this.state.notes.filter(note => note.id != id);
+
+    this.setStates({notes: filteredNotes})
+  }
+
   render() {
     return (
       <div className="App">
@@ -58,6 +73,7 @@ class App extends Component {
               <Swiper
                 props={this.state}
                 openModal={(event) => this.doThings(event)}
+                openNotes={() => this.setState({ noteOpen: true })}
               />
 
               <Modal
@@ -73,6 +89,8 @@ class App extends Component {
                 onClose={() => this.setState({ noteOpen: false })}
                 notes={this.state.notes}
                 props={this.state}
+                handleNote={this.handleNote} 
+                deleteNote={this.deleteNote}
               />
               <LikeBar
                 props={this.state}
