@@ -10,6 +10,7 @@ import Filter from "./Filter";
 import Modal from "./Modal";
 import NotePad from "./NotePad";
 import About from "./About";
+import Note from "./Note";
 
 class App extends Component {
   constructor() {
@@ -40,11 +41,9 @@ class App extends Component {
   }
 
   addNote = (event) => {
-    // console.log(1, event.target.id)
     const note = { note: event.target.value, id: event.target.id };
-    this.setState({
-      notes: [...this.state.notes, note],
-    });
+    
+    this.setState({ notes: [...this.state.notes, note] })
   };
 
   doThings = (event) => {

@@ -6,14 +6,12 @@ export default function NotePad({
   open,
   onClose,
   notes,
-  // handleNote,
   deleteNote,
   
 }) {
   if (!open) return null;
   
   const noteDisplay = notes.map((note) => {
-    // console.log('n',note)
     return (
       <Note
         {...note}
@@ -32,7 +30,7 @@ export default function NotePad({
             <img src={raven}></img>
             <button className='close' onClick={onClose}>&times;</button>
           </div>
-          {noteDisplay}
+          { noteDisplay.length ? noteDisplay : <h1>No Notes To Display Yet!</h1> }
         </div>
       </div>
     </>
