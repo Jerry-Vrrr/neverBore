@@ -29,6 +29,7 @@ describe('neverBore main page UI flow ', () => {
       .get('#relaxation').click()
       .get('.but-box').get('button').get('.add').click()
       .get('.view').click()
+      //save another and view list
       
     });
 
