@@ -9,7 +9,6 @@ import raven from "../raven.png";
 export default ({ props, openModal, openNotes, addToList }) => {
   return (
     <Swiper
-      // install Swiper modules
       className="swiper"
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={50}
@@ -31,7 +30,6 @@ export default ({ props, openModal, openNotes, addToList }) => {
             <button className='save' id={props['education'][1]} value={props['education'][0]} onClick={addToList}>
               Save Activity
             </button>
-            {/* <button onClick={openNotes}>Saved</button> */}
             </div>
             
           </h1>
@@ -49,7 +47,6 @@ export default ({ props, openModal, openNotes, addToList }) => {
           <button id={props['charity'][1]} value={props['charity'][0]} onClick={addToList}>
               Save Activity
             </button>
-          {/* <button onClick={openNotes}>Saved</button> */}
           </div>
           
         </h1>
@@ -66,7 +63,6 @@ export default ({ props, openModal, openNotes, addToList }) => {
           <button id={props['relaxation'][1]} value={props['relaxation'][0]} onClick={addToList}>
               Save Activity
             </button>
-          {/* <button onClick={openNotes}>Saved</button> */}
           </div>
           
         </h1>
@@ -83,7 +79,6 @@ export default ({ props, openModal, openNotes, addToList }) => {
           <button id={props['busywork'][1]} value={props['busywork'][0]} onClick={addToList}>
               Save Activity
             </button>
-          {/* <button onClick={openNotes}>Saved</button> */}
           </div>
           
         </h1>

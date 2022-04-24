@@ -7,7 +7,7 @@
   border-style: solid;
   border-color: #03989e;
   border-width: 6px;
-  Height: 4vh;
+  height: 4vh;
   width: 100vw;
 }
 .footer a {
@@ -27,7 +27,7 @@
   border-style: solid;
   overflow: hidden;
   border-color: #03989e;
-  Height: 15vh;
+  height: 15vh;
   width: 100vw;
 }
 .header .logo {
@@ -176,7 +176,7 @@ h1 {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-around;
-  Height: 12vh;
+  height: 12vh;
   padding-left: 2em;
   padding-right: 2em;
   background-image: url(https://images.fineartamerica.com/images-medium-large-5/seamless-wave-pattern-in-blue-and-white-incomible.jpg);
