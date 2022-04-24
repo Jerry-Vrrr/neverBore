@@ -36,7 +36,7 @@
 .swiper {
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   align-content: space-around;
@@ -51,6 +51,8 @@
   width: 100vw;
 }
 .swiper h2 {
+  display: flex;
+  flex-wrap: wrap;
   font-size: x-large;
   padding: 0.5em;
   padding-right: 1em;
@@ -64,7 +66,7 @@
   background-color: #e6e6db;
   margin: 2em;
 }
-.swiper h1 {
+.swiper .swipe-nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -73,8 +75,8 @@
   left: 10%;
   right: 20%;
   bottom: 70%;
-  min-height: 6.5em;
-  min-width: 12em;
+  min-height: 8em;
+  min-width: 15em;
   padding: 1.25em;
   border-style: solid;
   border-color: #03989e;
@@ -82,13 +84,11 @@
   border-radius: 5px;
   background-color: #e6e6db;
 }
-.swiper h1 .raven {
-  height: 2em;
-}
-.swiper h1 button {
+
+.but-box button {
   color: black;
-  margin: 1rem;
   border-radius: 3px;
+  margin: 0.5em;
   font-family: Arial;
   font-size: 14px;
   font-weight: 700;
@@ -99,9 +99,13 @@
   padding: 0px 20px 0px 20px;
   text-decoration: none;
 }
-.swiper h1 button:hover {
+.but-box button:hover {
   background: rgb(244, 244, 93);
   text-decoration: none;
+}
+
+.raven {
+  height: 2em;
 }
 
 h1 {
@@ -170,7 +174,7 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   Height: 12vh;
   padding-left: 2em;
   padding-right: 2em;
@@ -182,15 +186,16 @@ h1 {
   border-width: 4px;
 }
 .filter button {
-  color: black;
+  color: #03989e;
   -webkit-border-radius: 7;
   -moz-border-radius: 7;
   border-radius: 3px;
   font-family: Arial;
+  text-align: center;
   font-size: 20px;
   font-weight: 900;
-  width: 18rem;
-  height: 5.75rem;
+  width: 20rem;
+  height: 4rem;
   background: #e6e6db;
   border-color: #03989e;
   border-width: 3px;
@@ -206,47 +211,53 @@ h1 {
   margin: 1%;
   width: 80%;
 }
-@media (min-width: 420px) {
+@media (min-width: 390px) {
   .filter button {
     width: 5rem;
     font-size: small;
   }
 }
+@media (min-width: 420px) {
+  .filter button {
+    width: 7rem;
+    font-size: small;
+  }
+}
 @media (min-width: 530px) {
   .filter button {
-    width: 6.5rem;
+    width: 8rem;
     font-size: small;
   }
 }
 @media (min-width: 600px) {
   .filter button {
-    width: 7.5rem;
+    width: 9rem;
     font-size: medium;
   }
 }
 @media (min-width: 720px) {
   .filter button {
-    width: 9rem;
+    width: 12rem;
   }
 }
 @media (min-width: 850px) {
   .filter button {
-    width: 11rem;
+    width: 14rem;
   }
 }
 @media (min-width: 1140px) {
   .filter button {
-    width: 13rem;
+    width: 16rem;
   }
 }
 @media (min-width: 1300px) {
   .filter button {
-    width: 15rem;
+    width: 18rem;
   }
 }
 @media (min-width: 1500px) {
   .filter button {
-    width: 18rem;
+    width: 22rem;
   }
 }
 
@@ -286,8 +297,7 @@ h1 {
   height: 60vh;
   width: 60vw;
   position: fixed;
-  display: flex;
-  flex-direction: column;
+  display: block;
   align-content: space-around;
   flex-wrap: wrap;
   top: 50%;
@@ -306,7 +316,7 @@ h1 {
   margin-bottom: 2em;
 }
 .modal .modal-head img {
-  height: 5em;
+  height: 4em;
   margin: 1em;
   border-style: solid;
   border-radius: 0.5em;
@@ -321,19 +331,22 @@ h1 {
   border-width: 1.5px;
 }
 .modal h1 {
-  align-self: center;
-  font-size: 50px;
+  font-size: 45px;
   max-width: 50vw;
-  margin-bottom: 5em;
+  margin-bottom: 1em;
 }
 .modal a {
-  float: bottom;
   font-weight: 600;
+  margin-bottom: 3em;
+  font-size: x-large;
   color: black;
 }
 .modal .modal-foot {
+  max-width: 20em;
   display: flex;
+  flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 .modal .modal-foot button {
   border-radius: 3px;
@@ -437,7 +450,7 @@ h1 {
   line-height: 2;
 }
 
-.overlay {
+.note-overlay {
   position: fixed;
   top: 0%;
   left: 0%;
@@ -445,4 +458,20 @@ h1 {
   bottom: 0%;
   background-color: rgba(0, 0, 0, 0.75);
   z-index: 1000;
+}
+
+.note {
+  display: flex;
+  font-size: x-large;
+  font-weight: 600;
+}
+.note .delete {
+  height: 1.5em;
+  align-self: center;
+}
+
+.about {
+  height: 100vh;
+  width: 100vw;
+  background-color: aquamarine;
 }
