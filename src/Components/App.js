@@ -61,9 +61,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-               
+            <Header />
             <Route exact path="/">
-              <Header />
+              
               <Swiper
                 props={this.state}
                 openModal={(event) => this.doThings(event)}

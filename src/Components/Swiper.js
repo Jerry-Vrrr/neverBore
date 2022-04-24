@@ -28,10 +28,10 @@ export default ({ props, openModal, openNotes, addToList }) => {
             <br></br>
             <div className='but-box'>
             <button id='education' onClick={openModal}>expand</button>
-            <button id={props['education'][1]} value={props['education'][0]} onClick={addToList}>
+            <button className='save' id={props['education'][1]} value={props['education'][0]} onClick={addToList}>
               Save Activity
             </button>
-            <button onClick={openNotes}>Saved</button>
+            {/* <button onClick={openNotes}>Saved</button> */}
             </div>
             
           </h1>
@@ -49,7 +49,7 @@ export default ({ props, openModal, openNotes, addToList }) => {
           <button id={props['charity'][1]} value={props['charity'][0]} onClick={addToList}>
               Save Activity
             </button>
-          <button onClick={openNotes}>Saved</button>
+          {/* <button onClick={openNotes}>Saved</button> */}
           </div>
           
         </h1>
@@ -66,7 +66,7 @@ export default ({ props, openModal, openNotes, addToList }) => {
           <button id={props['relaxation'][1]} value={props['relaxation'][0]} onClick={addToList}>
               Save Activity
             </button>
-          <button onClick={openNotes}>Saved</button>
+          {/* <button onClick={openNotes}>Saved</button> */}
           </div>
           
         </h1>
@@ -83,7 +83,7 @@ export default ({ props, openModal, openNotes, addToList }) => {
           <button id={props['busywork'][1]} value={props['busywork'][0]} onClick={addToList}>
               Save Activity
             </button>
-          <button onClick={openNotes}>Saved</button>
+          {/* <button onClick={openNotes}>Saved</button> */}
           </div>
           
         </h1>

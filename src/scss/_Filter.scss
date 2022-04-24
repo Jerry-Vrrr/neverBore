@@ -8,7 +8,7 @@
     padding-right: 2em;
     background-image: url(https://images.fineartamerica.com/images-medium-large-5/seamless-wave-pattern-in-blue-and-white-incomible.jpg);
   background-repeat: no-repeat;
-  background-size: 1800px 1500px;
+  background-size: 2100px 1500px;
     border-style: solid;
     border-color: $border-color;
     border-width: 4px;
@@ -37,8 +37,6 @@
 
 .filter{
  button {
-    margin: 1%;
-    width: 80%;
 
     @include breakpoint(micro) {
       width: 5rem;

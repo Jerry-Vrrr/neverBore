@@ -20,7 +20,7 @@ export default function Modal({
           {children}
           <div className="modal-head">
             <img src={raven}></img>
-            <button onClick={onClose}>&times;</button>
+            <button className='close-modal' onClick={onClose}>&times;</button>
           </div>
           <div>
             <h1>{props[props.currentCategory][0]}</h1>
