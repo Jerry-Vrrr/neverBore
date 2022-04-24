@@ -7,7 +7,7 @@ const Header = () => {
   
   return (
     <section className="header">
-      <Link to="/">
+      <Link className='home' to="/">
         <img className="logo" src={neverBore} alt="neverBore raven logo" />
       </Link>
       

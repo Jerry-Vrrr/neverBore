@@ -48,7 +48,26 @@ describe('neverBore main page UI flow ', () => {
       .get('.save').click()
       .get('.saved').click()
       .get('.close').click()
+    });
+
+    it('Should be able to nav to saved activities from main as well', () => {
+      cy.visit('http://localhost:3000/')
+      .get('.saved').click()
+      .get('h1').contains('No Notes To Display Yet!')
+      .get('.close').click()
+      .get('.save').click()
+      .get('.saved').click()
+      .get('.close').click()
+    });
+
+    it('Should be able to nav to about page and back', () => {
+      cy.visit('http://localhost:3000/')
+      .get('.about').click()
+      .get('h1').contains('About neverBore')
+      .get('.home').click()
       
     });
+
+
 
   });
