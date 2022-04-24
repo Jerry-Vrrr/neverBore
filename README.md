@@ -7,18 +7,18 @@ The goal of this project was to create an app for a niche audience on a tight de
 ## Usage
 A User lands on the main page of the app and can swipe through the carousel and the 4 categories of activities (Educational, Volunteer, Relaxation and Productivity).
 
-![gif of info](https://media.giphy.com/media/plFwmDRhUtC06EnGya/giphy.gif)
 
 When a user is ready to accept a bordom fighting activity, they can click `Save Activity` and view the currently saved activities by clicking `See Your Saved Activities`. 
 
-![gif of reading](https://media.giphy.com/media/cFK9C0mOVQxuuq5uvb/giphy.gif)
+![save-notes](https://user-images.githubusercontent.com/92649050/164998408-cd671620-9197-4aa3-9b18-2e5ab032f2bc.gif)
 
 If a user wants to find out more information about a certain activity, they can click `Expand`. A modal will appear with a link to some tutorials on the activity.
 
-![gif of saved reading](https://media.giphy.com/media/jNq0qXQsYNcXWvcCIk/giphy.gif)
+![modal](https://user-images.githubusercontent.com/92649050/164998259-f6f17527-a77b-434e-b6ee-17203aa469af.gif)
 
 Route to our About page to learn more about boredom and learn some (not boring) facts about boredom. Did you know that the German word for Boredom is "Hasselhoff"?
 
+![about](https://user-images.githubusercontent.com/92649050/164998305-c423d394-39f0-4f6d-8f9d-1898006efd26.gif)
 
 
 ## How to Install
@@ -42,10 +42,11 @@ Visit the deployed site [here](http://futur-mystic.herokuapp.com/)
 2. React Router
 3. Cypress
 4. SCSS
+5. NPM Swiper package
 
 
 ## Future Iterations
-- The App could use some general "tightening" and I had wanted to implement a Tinder like swipe function where users can save or dismiss activities. That said, I will likely leave the App as is as a marker in space and time to look back at what I was able to accomplish in a few days in Mod 3 of The Turing School of Software Development. 
+- The App could use some general "tightening" and I had wanted to implement a Tinder-esque swipe function where users can save or dismiss activities. That said, I will likely leave the App 'as is' as a marker in space and time to look back at what I was able to accomplish in a few days in Mod 3 of The Turing School of Software Development. 
 
 
 ## Project Members
