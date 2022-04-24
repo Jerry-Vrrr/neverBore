@@ -33,10 +33,10 @@ export default function Modal({
               Check Out Some Tutorials
             </a>
           <div className="but-box">
-            <button value={props[props.currentCategory][0]} onClick={addToList}>
+            <button className='add' value={props[props.currentCategory][0]} onClick={addToList}>
               Add To List
             </button>
-            <button onClick={openNotes}>View List</button>
+            <button className='view' onClick={openNotes}>View List</button>
           </div>
         </div>
       </div>
