@@ -28,8 +28,26 @@ describe('neverBore main page UI flow ', () => {
       .click()
       .get('#relaxation').click()
       .get('.but-box').get('button').get('.add').click()
+      .get('.view').click().get('h1')
+    });
+
+    it('Should be able to delete activities and return to main', () => {
+      cy.visit('http://localhost:3000/')
+      .get('.swiper').get('.swiper-button-next').click()
+      .click()
+      .get('#relaxation').click()
+      .get('.but-box').get('button').get('.add').click()
       .get('.view').click()
-      //save another and view list
+      .get('.delete').click()
+      .get('.close').click()
+      .get('.close-modal').click()
+    });
+
+    it('Should be able to nav to saved activities from main as well', () => {
+      cy.visit('http://localhost:3000/')
+      .get('.save').click()
+      .get('.saved').click()
+      .get('.close').click()
       
     });
 
