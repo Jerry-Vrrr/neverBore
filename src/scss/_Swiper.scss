@@ -1,7 +1,7 @@
 .swiper {
   display: flex;
   flex-direction: column;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   align-content: space-around;
@@ -16,6 +16,8 @@
   width: 100vw;
   
     h2 {
+      display: flex;
+      flex-wrap: wrap;
       font-size: x-large;
       padding: 0.5em;
       padding-right: 1em;
@@ -30,7 +32,6 @@
       margin: 2em;
     }
     .swipe-nav {
-    h1 {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-around;
@@ -47,29 +48,34 @@
       border-width: 3px;
       border-radius: 5px;
       background-color: $primary-color;
-      .raven {
-        height: 2em;
-      }
-      button {
-        color: black;
-        margin: 1rem;
-        border-radius: 3px;
-        font-family: Arial;
-        font-size: 14px;
-        font-weight: 700;
-        background: $accent-color;
-        border-style: dashed;
-        border-color: rgba(255, 255, 0);
-        height: 2.5em;
-        padding: 0px 20px 0px 20px;
-        text-decoration: none;
-      }
-      button:hover {
-        background: rgba(244, 244, 93);
-        text-decoration: none;
-      }
-    }
+    
   }
+}
+
+.but-box {
+  button {
+    color: black;
+    border-radius: 3px;
+    margin: .5em;
+    font-family: Arial;
+    font-size: 14px;
+    font-weight: 700;
+    background: $accent-color;
+    border-style: dashed;
+    border-color: rgba(255, 255, 0);
+    height: 2.5em;
+    padding: 0px 20px 0px 20px;
+    text-decoration: none;
+  }
+  button:hover {
+    background: rgba(244, 244, 93);
+    text-decoration: none;
+  }
+
+}
+
+.raven {
+  height: 2em;
 }
 
 h1 {
