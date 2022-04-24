@@ -1,7 +1,7 @@
 import "../css/style.css";
 import { educational, chores, charity, relaxation } from "../apiCals";
-import React, { Component } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import React, { Component} from "react";
+import {  Route } from "react-router-dom";
 import Header from "./Header";
 import Footer from "./Footer";
 import Swiper from "./Swiper";
@@ -9,6 +9,7 @@ import LikeBar from "./LikeBar";
 import Filter from "./Filter";
 import Modal from "./Modal";
 import NotePad from "./NotePad";
+import About from "./About";
 
 class App extends Component {
   constructor() {
@@ -21,13 +22,13 @@ class App extends Component {
       isOpen: false,
       noteOpen: false,
       notes: [],
-      currentCategory: ''
+      currentCategory: "",
     };
   }
 
   fetchAll = (type) => {
     return type.then((data) => {
-      this.setState({ [data.type]: data.activity });
+      this.setState({ [data.type]: [data.activity, data.key] });
     });
   };
 
@@ -39,41 +40,36 @@ class App extends Component {
   }
 
   addNote = (event) => {
+    // console.log(1, event.target.id)
+    const note = { note: event.target.value, id: event.target.id };
     this.setState({
-      notes: [...this.state.notes, event.target.value],
+      notes: [...this.state.notes, note],
     });
   };
 
-  doThings=(event) => {
-    this.setState({ isOpen: true, currentCategory: event.target.id })
-  }
+  doThings = (event) => {
+    this.setState({ isOpen: true, currentCategory: event.target.id });
+  };
 
-  handleNote = (id) => {
-    const updatedNotes = this.state.notes.map(note => {
-      if (note.id === id) {
-        note.checked = !note.checked
-      } return note;
-    })
-    this.setState({notes: updatedNotes})
-  }
+  deleteNote = (event) => {
+    event.preventDefault();
+    const filteredNotes = this.state.notes.filter(note => note.id !== event.target.id);
 
-  deleteTask = (id) => {
-    const filteredNotes = this.state.notes.filter(note => note.id != id);
-
-    this.setStates({notes: filteredNotes})
-  }
+    this.setState({ notes: filteredNotes });
+  };
 
   render() {
     return (
       <div className="App">
-        <Router>
-          <Switch>
-            <Route path="/">
+               
+            <Route exact path="/">
               <Header />
               <Swiper
                 props={this.state}
                 openModal={(event) => this.doThings(event)}
                 openNotes={() => this.setState({ noteOpen: true })}
+                addToList={this.addNote}
+                currentCategory={this.state.currentCategory}
               />
 
               <Modal
@@ -89,9 +85,10 @@ class App extends Component {
                 onClose={() => this.setState({ noteOpen: false })}
                 notes={this.state.notes}
                 props={this.state}
-                handleNote={this.handleNote} 
+                handleNote={this.handleNote}
                 deleteNote={this.deleteNote}
               />
+
               <LikeBar
                 props={this.state}
                 openNotes={() => this.setState({ noteOpen: true })}
@@ -99,8 +96,11 @@ class App extends Component {
               <Filter />
               <Footer />
             </Route>
-          </Switch>
-        </Router>
+
+            <Route exact path="/about">
+                <About />
+            </Route >
+            
       </div>
     );
   }

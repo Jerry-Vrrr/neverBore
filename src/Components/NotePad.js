@@ -6,20 +6,22 @@ export default function NotePad({
   open,
   onClose,
   notes,
-  handleTask,
-  deleteTask,
+  // handleNote,
+  deleteNote,
+  
 }) {
   if (!open) return null;
-  console.log(notes)
-  const noteDisplay = notes.map(note => {
-    console.log('note', note)
+  
+  const noteDisplay = notes.map((note) => {
+    // console.log('n',note)
     return (
       <Note
         {...note}
         key={note.id}
-        handleTask={handleTask}
-        deleteTask={deleteTask}
-        note={note}
+        id={note.id}
+        // handleNote={handleNote}
+        deleteNote={deleteNote}
+        note={note.note}
       />
     );
   });

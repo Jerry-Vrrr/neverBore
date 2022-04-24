@@ -23,17 +23,17 @@ export default function Modal({
             <button onClick={onClose}>&times;</button>
           </div>
           <div>
-            <h1>{props[props.currentCategory]}</h1>
+            <h1>{props[props.currentCategory][0]}</h1>
           </div>
+          <br></br>
           <a
               target="blank"
-              href={`https://www.youtube.com/results?search_query=${props.currentCategory}`}
+              href={`https://www.youtube.com/results?search_query=${props[props.currentCategory][0]}`}
             >
               Check Out Some Tutorials
             </a>
-          <div className="modal-foot">
-            
-            <button value={props[props.currentCategory]} onClick={addToList}>
+          <div className="but-box">
+            <button value={props[props.currentCategory][0]} onClick={addToList}>
               Add To List
             </button>
             <button onClick={openNotes}>View List</button>

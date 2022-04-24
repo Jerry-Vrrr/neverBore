@@ -6,7 +6,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import raven from "../raven.png";
 
-export default ({ props, openModal, openNotes }) => {
+export default ({ props, openModal, openNotes, addToList }) => {
   return (
     <Swiper
       // install Swiper modules
@@ -21,48 +21,69 @@ export default ({ props, openModal, openNotes }) => {
       <SwiperSlide>
         <h2>Educational</h2>
         <div>
-          <h1>
+        <h1 className="swipe-nav">
             <img className="raven" src={raven} />
             <br></br>
-            {props.education}
+            {props.education[0]}
             <br></br>
+            <div className='but-box'>
             <button id='education' onClick={openModal}>expand</button>
-            <button onClick={openNotes}>View List</button>
+            <button id={props['education'][1]} value={props['education'][0]} onClick={addToList}>
+              Save Activity
+            </button>
+            <button onClick={openNotes}>Saved</button>
+            </div>
+            
           </h1>
         </div>
       </SwiperSlide>
       <SwiperSlide>
         <h2>Volunteer</h2>
-        <h1>
+        <h1 className="swipe-nav">
           <img className="raven" src={raven} />
           <br></br>
-          {props.charity}
+          {props.charity[0]}
           <br></br>
+          <div className='but-box'>
           <button id='charity' onClick={openModal}>expand</button>
-          <button onClick={openNotes}>View List</button>
+          <button id={props['charity'][1]} value={props['charity'][0]} onClick={addToList}>
+              Save Activity
+            </button>
+          <button onClick={openNotes}>Saved</button>
+          </div>
+          
         </h1>
       </SwiperSlide>
-      <SwiperSlide>
+      <SwiperSlide >
         <h2>Relaxation</h2>
-        <h1>
+        <h1 className="swipe-nav">
           <img className="raven" src={raven} />
           <br></br>
-          {props.relaxation}
+          {props.relaxation[0]}
           <br></br>
+          <div className='but-box'>
           <button id='relaxation' onClick={openModal}>expand</button>
-          <button onClick={openNotes}>View List</button>
+          <button id={props['relaxation'][1]} value={props['relaxation'][0]} onClick={addToList}>
+              Save Activity
+            </button>
+          <button onClick={openNotes}>Saved</button>
+          </div>
+          
         </h1>
       </SwiperSlide>
       <SwiperSlide>
-        <h2>Chores</h2>
-        <h1>
+        <h2>Productivity</h2>
+        <h1 className="swipe-nav">
           <img className="raven" src={raven} />
           <br></br>
-          {props.busywork}
+          {props.busywork[0]}
           <br></br>
-          <div>
+          <div className='but-box'>
           <button id='busywork' onClick={openModal}>expand</button>
-          <button onClick={openNotes}>View List</button>
+          <button id={props['busywork'][1]} value={props['busywork'][0]} onClick={addToList}>
+              Save Activity
+            </button>
+          <button onClick={openNotes}>Saved</button>
           </div>
           
         </h1>
