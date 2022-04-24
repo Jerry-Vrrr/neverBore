@@ -25,6 +25,7 @@
   flex-direction: row;
   background-color: #ff5757;
   border-style: solid;
+  overflow: hidden;
   border-color: #03989e;
   Height: 15vh;
   width: 100vw;
@@ -42,7 +43,7 @@
   align-content: space-around;
   background-image: url(https://images.fineartamerica.com/images-medium-large-5/seamless-wave-pattern-in-blue-and-white-incomible.jpg);
   background-repeat: no-repeat;
-  background-size: 1800px 1500px;
+  background-size: 2100px 1500px;
   object-fit: cover;
   border-style: solid;
   border-color: #03989e;
@@ -180,7 +181,7 @@ h1 {
   padding-right: 2em;
   background-image: url(https://images.fineartamerica.com/images-medium-large-5/seamless-wave-pattern-in-blue-and-white-incomible.jpg);
   background-repeat: no-repeat;
-  background-size: 1800px 1500px;
+  background-size: 2100px 1500px;
   border-style: solid;
   border-color: #03989e;
   border-width: 4px;
@@ -207,10 +208,6 @@ h1 {
   text-decoration: none;
 }
 
-.filter button {
-  margin: 1%;
-  width: 80%;
-}
 @media (min-width: 390px) {
   .filter button {
     width: 5rem;
@@ -473,5 +470,31 @@ h1 {
 .about {
   height: 100vh;
   width: 100vw;
-  background-color: aquamarine;
+  overflow: hidden;
+  background-image: url(https://images.fineartamerica.com/images-medium-large-5/seamless-wave-pattern-in-blue-and-white-incomible.jpg);
+}
+.about h1, .about h2 {
+  font-size: xx-large;
+  background-color: #e6e6db;
+  margin: 1em;
+  width: 8em;
+  padding: 0.25em;
+}
+.about p {
+  font-size: x-large;
+  background-color: #e6e6db;
+  margin: 1em;
+  margin-top: 0em;
+  padding: 0.5em;
+  margin-right: 3.5em;
+}
+.about ul {
+  font-size: large;
+  background-color: #e6e6db;
+  margin: 1em;
+  margin-right: 3.5em;
+}
+.about ul label {
+  font-size: larger;
+  text-decoration: underline;
 }

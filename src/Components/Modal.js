@@ -20,7 +20,7 @@ export default function Modal({
           {children}
           <div className="modal-head">
             <img src={raven}></img>
-            <button onClick={onClose}>&times;</button>
+            <button className='close-modal' onClick={onClose}>&times;</button>
           </div>
           <div>
             <h1>{props[props.currentCategory][0]}</h1>
@@ -33,10 +33,10 @@ export default function Modal({
               Check Out Some Tutorials
             </a>
           <div className="but-box">
-            <button value={props[props.currentCategory][0]} onClick={addToList}>
+            <button className='add' value={props[props.currentCategory][0]} onClick={addToList}>
               Add To List
             </button>
-            <button onClick={openNotes}>View List</button>
+            <button className='view' onClick={openNotes}>View List</button>
           </div>
         </div>
       </div>

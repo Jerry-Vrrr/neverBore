@@ -2,5 +2,36 @@
 .about {
     height: 100vh;
     width: 100vw;
-    background-color: aquamarine;
-}
+    overflow: hidden;
+    background-image: url(https://images.fineartamerica.com/images-medium-large-5/seamless-wave-pattern-in-blue-and-white-incomible.jpg);
+        
+        h1, h2 {
+            font-size: xx-large;
+            background-color: $primary-color;
+            margin: 1em;
+            width: 8em;
+            padding: .25em;
+            
+        }
+        p {
+            font-size: x-large;
+            background-color: $primary-color;
+            margin: 1em;
+            margin-top: 0em;
+            padding: .5em;
+            margin-right: 3.5em;
+        }
+
+        ul {
+            font-size: large;
+            background-color: $primary-color;
+            margin: 1em;
+            margin-right: 3.5em;
+                label {
+                    font-size: larger;
+                    text-decoration: underline;
+                }
+        }
+
+    }
+        

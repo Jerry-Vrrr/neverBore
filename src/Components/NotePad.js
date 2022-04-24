@@ -19,7 +19,6 @@ export default function NotePad({
         {...note}
         key={note.id}
         id={note.id}
-        // handleNote={handleNote}
         deleteNote={deleteNote}
         note={note.note}
       />
@@ -31,7 +30,7 @@ export default function NotePad({
         <div className="notepad">
           <div className="note-head">
             <img src={raven}></img>
-            <button onClick={onClose}>&times;</button>
+            <button className='close' onClick={onClose}>&times;</button>
           </div>
           {noteDisplay}
         </div>

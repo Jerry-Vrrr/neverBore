@@ -1,5 +1,5 @@
 import { useContext } from "react";
-// import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import neverBore from "../neverBore.png";
 
 
@@ -7,9 +7,9 @@ const Header = () => {
   
   return (
     <section className="header">
-      {/* <Link to="/"> */}
+      <Link to="/">
         <img className="logo" src={neverBore} alt="neverBore raven logo" />
-      {/* </Link> */}
+      </Link>
       
     </section>
   );
