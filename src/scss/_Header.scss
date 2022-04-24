@@ -1,13 +1,13 @@
 .header {
-    display: flex;
-    flex-direction: row;
-    background-color: $header-color;
-    border-style: solid;
-    overflow: hidden;
-    border-color: $border-color;
-    Height: 15vh;
-    width: 100vw;
-        .logo {
-            height: 9em
-        }
+  display: flex;
+  flex-direction: row;
+  background-color: $header-color;
+  border-style: solid;
+  overflow: hidden;
+  border-color: $border-color;
+  height: 15vh;
+  width: 100vw;
+  .logo {
+    height: 9em;
+  }
 }

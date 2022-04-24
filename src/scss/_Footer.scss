@@ -1,22 +1,21 @@
 .footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    background-color: $header-color;
-    border-style: solid;
-    border-color: $border-color;
-    border-width: 6px;
-    Height: 4vh;
-    width: 100vw;
-        a {
-            color: $font;
-            font-weight: 500;
-            font-size: large;
-            text-decoration: underline;
-        }
-        .logo {
-            height: 3em
-        }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $header-color;
+  border-style: solid;
+  border-color: $border-color;
+  border-width: 6px;
+  height: 4vh;
+  width: 100vw;
+  a {
+    color: $font;
+    font-weight: 500;
+    font-size: large;
+    text-decoration: underline;
+  }
+  .logo {
+    height: 3em;
+  }
 }
-

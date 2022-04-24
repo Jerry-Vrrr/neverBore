@@ -10,7 +10,6 @@ import Filter from "./Filter";
 import Modal from "./Modal";
 import NotePad from "./NotePad";
 import About from "./About";
-import Note from "./Note";
 
 class App extends Component {
   constructor() {

@@ -11,7 +11,6 @@ export default function Modal({
 }) {
 
   if (!open) return null;
-  
 
   return (
     <>
