@@ -1,17 +1,10 @@
 import React from "react";
 
-export default function Note({handleNote, id, deleteNote, note}) {
-    console.log(note)
+export default function Note({ deleteNote, note, id}) {
   return (
-    <form className="note">
-      <input
-        id={Date.now()}
-        type="checkbox"
-        // checked={checked}
-        onChange={() => handleNote(id)}
-      />
+    <form className="note" id={id} >
+      <button id={id} className="delete" onClick={(event) => deleteNote(event)}>&Theta;</button>
       <p>{note}</p>
-      <button className="delete-button" onClick={() => deleteNote(id)}>&times;</button>
     </form>
   );
 }
