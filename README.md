@@ -32,7 +32,7 @@ To run tests: `npm run cypress`
 
 OR
 
-Visit the deployed site [here](http://futur-mystic.herokuapp.com/)
+Visit the deployed site [here](https://glistening-letters.surge.sh/)
 
 **Please note: Both Heroku and the site this api are hosted on can take time to ‘wake up’ when they haven’t been accessed recently. Please be patient with the initial load.
 
